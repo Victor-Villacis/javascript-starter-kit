@@ -2,7 +2,18 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "JavaScript Development Environment",
-  "scripts": {},
+  "scripts": {
+    "prestart": "babel-node buildScripts/startMessage.js",
+    "start": "npm run all --parallel open:src lint:watch",
+    "open:src": "babel-node buildScripts/srcServer.js",
+    "browser-sync-static": "browser-sync start --server --files '*'",
+    "browser-sync-dynamic": "browser-sync start --proxy 'localhost:3000' --files '*'",
+    "share": "lt --port 3000 --subdomain victorapp",
+    "tunnel": "npm-run-all --parallel start share",
+    "lint": "esw webpack.config.* src buildScripts --color",
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\""
+  },
   "author": "Victor Villacis",
   "license": "MIT",
   "dependencies": {

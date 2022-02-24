@@ -1,0 +1,9 @@
+body {
+  font-size: 45px;
+  font-family: monospace;
+  background-color: aquamarine;
+}
+
+table th {
+  padding: 5px;
+}
