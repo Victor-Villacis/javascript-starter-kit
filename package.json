@@ -4,7 +4,7 @@
   "description": "JavaScript Development Environment",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm run all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src lint:watch",
     "open:src": "babel-node buildScripts/srcServer.js",
     "browser-sync-static": "browser-sync start --server --files '*'",
     "browser-sync-dynamic": "browser-sync start --proxy 'localhost:3000' --files '*'",
