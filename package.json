@@ -4,27 +4,23 @@
   "description": "JavaScript Development Environment",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch start-mock-apiserver",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint:watch": "npm run lint -- --watch",
     "lint": "esw webpack.config.* src buildScripts --color",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
+    "generate-mock-data": "babel-node buildScripts/generateMockData.js",
+    "prestart-mock-apiserver": "npm run generate-mock-data",
+    "start-mock-apiserver": "json-server --watch src/api/db.json --port 8081",
+    
     "start-browser-sync-server": "browser-sync start --server 'src' --files 'src/*' --watch ",
     "browser-sync-proxy-server": "browser-sync start --proxy 'localhost:8080' --files 'src/*' --ws --tunnel --logLevel='debug'",
     
     "share-running-app": "lt --port 8080 --subdomain ibx-victor-app",
-    "start-with-tunnel": "npm-run-all --parallel start share"
-    
-    
- 
+    "start-with-tunnel": "npm-run-all --parallel start share" 
 
-
-    
-    
-
-
-  },
+  }, 
   "author": "Victor Villacis",
   "license": "MIT",
   "dependencies": {

@@ -9,12 +9,12 @@ describe('First Test, ', () => {
 });
 
 describe('index.html', () => {
-  it('title should say', () => {
+  it('H1 should say Users', () => {
     const index = fs.readFileSync('./src/index.html', 'utf8');
     const {JSDOM} = jsdom;
     const dom = new JSDOM(index);
     const h1 = dom.window.document.querySelector('h1');
-    expect(h1.innerHTML).to.equal('Hello World');
+    expect(h1.innerHTML).to.equal('Users');
     dom.window.close();
   });
 });

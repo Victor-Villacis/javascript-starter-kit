@@ -1,4 +1,5 @@
 import path from 'path';
+import webpack from 'webpack';
 
 export default {
   mode: 'development',
@@ -9,7 +10,11 @@ export default {
     publicPath: '/',
     filename: 'bundle.js',
   },
-  plugins: [],
+  plugins: [
+    new webpack.DefinePlugin({
+      template: '#! /usr/bin/env node',
+    }),
+  ],
   module: {
     rules: [
       {test: /\.js$/, exclude: /node_modules/, use: ['babel-loader']},
