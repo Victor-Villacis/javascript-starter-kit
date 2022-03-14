@@ -12,24 +12,17 @@
     "test:watch": "npm run test -- --watch",
     "start-browser-sync-server": "browser-sync start --server 'src' --files 'src/*' --watch ",
     "browser-sync-proxy-server": "browser-sync start --proxy 'localhost:8080' --files 'src/*' --ws --tunnel --logLevel='debug'",
-    
     "share-running-app": "lt --port 8080 --subdomain ibx-victor-app",
-    "start-with-tunnel": "npm-run-all --parallel start share"
-    
-    
- 
-
-
-    
-    
-
-
+    "start-with-tunnel": "npm-run-all --parallel start share",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "Victor Villacis",
   "license": "MIT",
   "dependencies": {
-    "update": "^0.4.2",
-    "whatwg-fetch": "3.6.2"
+    "update": "^0.5.0",
+    "whatwg-fetch": "3.6.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
@@ -65,5 +58,6 @@
     "surge": "^0.20.1",
     "webpack": "5.24.2",
     "webpack-dev-middleware": "4.1.0"
-  }
+  },
+  "snyk": true
 }

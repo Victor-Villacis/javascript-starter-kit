@@ -1,0 +1,10 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.22.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - update > assemble-core > assemble-fs > vinyl-fs > glob-stream > minimatch:
+        patched: '2022-03-14T05:46:05.118Z'
+    - update > assemble-core > assemble-fs > vinyl-fs > glob-stream > glob > minimatch:
+        patched: '2022-03-14T05:46:05.118Z'
