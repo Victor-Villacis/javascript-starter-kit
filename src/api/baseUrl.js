@@ -1,5 +1,7 @@
 export default function getBaseUrl() {
-  return getQueryStringParameterByName('useMockApi') ? 'http://localhost:8081/' : '/';
+  return getQueryStringParameterByName('useMockApi')
+    ? 'http://localhost:8081/'
+    : 'https://arcane-sea-71022.herokuapp.com/';
 }
 
 //get parameter name from url

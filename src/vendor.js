@@ -10,3 +10,4 @@
  */
 
 import fetch from 'whatwg-fetch'; //eslint-disable-line
+import numeral from 'numeral'; //eslint-disable-line

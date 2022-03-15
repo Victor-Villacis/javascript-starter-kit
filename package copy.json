@@ -20,8 +20,7 @@
     "start-browser-sync-server": "browser-sync start --server 'src' --files 'src/*' --watch ",
     "browser-sync-proxy-server": "browser-sync start --proxy 'localhost:8080' --files 'src/*' --ws --tunnel --logLevel='debug'",
     "share-running-app": "lt --port 8080 --subdomain ibx-victor-app",
-    "start-app-with-tunnel": "npm-run-all --parallel start share",
-    "deploy": "surge ./dist/ ibx-victor-app.surge.sh"
+    "start-app-with-tunnel": "npm-run-all --parallel start share"
   },
   "author": "Victor Villacis",
   "license": "MIT",

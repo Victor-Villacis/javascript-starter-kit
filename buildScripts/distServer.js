@@ -19,14 +19,15 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.get('/users', function (req, res) {
-  // Hard code, but you would normally grab this from a database
-  res.json([
-    {id: 1, firstName: 'Maccy', lastName: 'Mac', email: 'mac@gmail.com', saved: '1000'},
-    {id: 2, firstName: 'Linus', lastName: 'Linux', email: 'linux@gmail.com', saved: '2000'},
-    {id: 3, firstName: 'Wendy', lastName: 'Windows', email: 'windows@gmail.com', saved: '3000'},
-  ]);
-});
+//Endpoint extracted and moved to Heroku.
+// app.get('/users', function (req, res) {
+//   // Hard code, but you would normally grab this from a database
+//   res.json([
+//     {id: 1, firstName: 'Maccy', lastName: 'Mac', email: 'mac@gmail.com', saved: '1000'},
+//     {id: 2, firstName: 'Linus', lastName: 'Linux', email: 'linux@gmail.com', saved: '2000'},
+//     {id: 3, firstName: 'Wendy', lastName: 'Windows', email: 'windows@gmail.com', saved: '3000'},
+//   ]);
+// });
 
 app.listen(port, function (err) {
   if (err) {
