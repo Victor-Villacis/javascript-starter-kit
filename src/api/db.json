@@ -1,3 +1,39 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": 64951051,
+      "firstName": "Brice",
+      "lastName": "Feest",
+      "email": "Tavares.Abshire66@yahoo.com",
+      "saved": 291.62
+    },
+    {
+      "id": 36586296,
+      "firstName": "Dora",
+      "lastName": "Tromp",
+      "email": "Lilly_Grady29@gmail.com",
+      "saved": 83.74
+    },
+    {
+      "id": 98949494,
+      "firstName": "Meghan",
+      "lastName": "Hackett",
+      "email": "Delaney_Ziemann@yahoo.com",
+      "saved": 769.3
+    },
+    {
+      "id": 53832970,
+      "firstName": "Marques",
+      "lastName": "Hamill",
+      "email": "Herminia53@gmail.com",
+      "saved": 212.7
+    },
+    {
+      "id": 13605310,
+      "firstName": "Kevin",
+      "lastName": "Schroeder",
+      "email": "Maritza_Gusikowski29@gmail.com",
+      "saved": 115.95
+    }
+  ]
 }

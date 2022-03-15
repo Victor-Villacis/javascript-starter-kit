@@ -13,14 +13,15 @@
     "generate-mock-data": "babel-node buildScripts/generateMockData.js",
     "prestart-mock-apiserver": "npm run generate-mock-data",
     "start-mock-apiserver": "json-server --watch src/api/db.json --port 8081",
-    
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "babel-node buildScripts/distServer.js",
     "start-browser-sync-server": "browser-sync start --server 'src' --files 'src/*' --watch ",
     "browser-sync-proxy-server": "browser-sync start --proxy 'localhost:8080' --files 'src/*' --ws --tunnel --logLevel='debug'",
-    
     "share-running-app": "lt --port 8080 --subdomain ibx-victor-app",
-    "start-with-tunnel": "npm-run-all --parallel start share" 
-
-  }, 
+    "start-app-with-tunnel": "npm-run-all --parallel start share"
+  },
   "author": "Victor Villacis",
   "license": "MIT",
   "dependencies": {
@@ -46,7 +47,7 @@
     "eslint-watch": "7.0.0",
     "express": "4.17.1",
     "faker": "^5.4.0",
-    "html-webpack-plugin": "5.2.0",
+    "html-webpack-plugin": "^5.2.0",
     "jsdom": "^16.4.0",
     "json-schema-faker": "0.5.0-rcv.27",
     "json-server": "0.16.3",

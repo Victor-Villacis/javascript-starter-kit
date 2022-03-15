@@ -1,25 +1,22 @@
 // express sever
-//srcServer.js will be used to build and serve files from the src folder.
+//distServer.js will be used to server the static files from the dist folder.
+// Not for production use. Only for local production build debugging.
 import express from 'express';
 import path from 'path';
 import open from 'open';
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
+// make sure gzip is enabled
+import compression from 'compression';
 
 /* eslint-disable no-console */
 
 const port = 8080;
 const app = express();
-const compiler = webpack(config);
 
-app.use(
-  require('webpack-dev-middleware')(compiler, {
-    publicPath: config.output.publicPath,
-  })
-);
+app.use(compression());
+app.use(express.static('dist'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.get('/users', function (req, res) {
