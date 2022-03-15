@@ -1,39 +1,25 @@
 {
   "users": [
     {
-      "id": 31860855,
-      "firstName": "Mike",
-      "lastName": "McLaughlin",
-      "email": "Kale.Jones@gmail.com",
-      "saved": 594.4
+      "id": 80592385,
+      "firstName": "Ramon",
+      "lastName": "Jones",
+      "email": "Hershel_Kertzmann@yahoo.com",
+      "saved": 365.61
     },
     {
-      "id": 24518856,
-      "firstName": "Leonel",
-      "lastName": "Pfeffer",
-      "email": "Fabiola.Dickinson17@hotmail.com",
-      "saved": 379.83
+      "id": 84902577,
+      "firstName": "Laisha",
+      "lastName": "Reichel",
+      "email": "Charlene.Funk@gmail.com",
+      "saved": 792.87
     },
     {
-      "id": 55933923,
-      "firstName": "Manley",
-      "lastName": "Macejkovic",
-      "email": "Marta_Christiansen53@yahoo.com",
-      "saved": 843.61
-    },
-    {
-      "id": 29460450,
-      "firstName": "Ila",
-      "lastName": "Vandervort",
-      "email": "Gaetano29@hotmail.com",
-      "saved": 167.37
-    },
-    {
-      "id": 82091376,
-      "firstName": "Melany",
-      "lastName": "Marquardt",
-      "email": "Emelie_Langosh@yahoo.com",
-      "saved": 758.55
+      "id": 77628182,
+      "firstName": "Kobe",
+      "lastName": "West",
+      "email": "Lonnie_Okuneva65@hotmail.com",
+      "saved": 741.32
     }
   ]
 }

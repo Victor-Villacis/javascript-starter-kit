@@ -20,6 +20,8 @@ app.get('/', function (req, res) {
 });
 
 //Endpoint extracted and moved to Heroku.
+// To bring back, uncomment below and remove Heroku endpoint.
+// Go to api/baseUrl.js to do so. Just leave a / to hit below.
 // app.get('/users', function (req, res) {
 //   // Hard code, but you would normally grab this from a database
 //   res.json([
