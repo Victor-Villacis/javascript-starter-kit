@@ -18,11 +18,10 @@ npm install
 
 ```sh
 npm start
-
-`Runs the web app in the development mode.
-Src is bundled and served from memory. 
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.`
 ```
+Runs the web app in the development mode.
+Src is bundled and served from memory. 
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 ```sh
 ### `npm run build`
