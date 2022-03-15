@@ -37,6 +37,7 @@ npm run deploy
 * First Update the url on line 24 of package.json
 * Example: 24: "deploy": "surge ./dist/ ibx-victor-app.surge.sh"
 * Signup with command line promps if no account. 
+* Build is deployed to the server. 
 
 ## Run tests
 
